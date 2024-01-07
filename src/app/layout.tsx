@@ -10,7 +10,7 @@ import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name}}`,
+  title: `${siteConfig.name}`,
   description: `${siteConfig.description}`,
 }
 

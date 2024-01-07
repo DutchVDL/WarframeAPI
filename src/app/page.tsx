@@ -16,12 +16,12 @@ export default function Home() {
     <main>
       <section
         id="hero"
-        className="container grid items-center gap-6 py-6 md:py-20"
+        className="container grid items-center gap-6 py-12 md:py-20"
       >
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">
             Next.js 14 boilerplate <br className="hidden sm:inline" />
-            avoid the sweat and tears.
+            Avoid the sweat and tears.
           </h1>
           <p className="max-w-[700px] text-lg text-muted-foreground">
             Forget the struggle, embrace the snuggle. This boilerplate is
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div className="flex gap-4">
           <Link
-            href="#"
+            href="https://www.ideebi.com/templates"
             target="_blank"
             rel="noreferrer"
             className={buttonVariants()}
@@ -40,7 +40,7 @@ export default function Home() {
           <Link
             target="_blank"
             rel="noreferrer"
-            href="#"
+            href="https://github.com/ideebico/"
             className={buttonVariants({ variant: "outline" })}
           >
             GitHub
@@ -50,7 +50,7 @@ export default function Home() {
       <div className="mx-auto h-[1px] max-w-[980px] bg-gradient-to-r from-background via-muted to-background" />
       <section
         id="modules"
-        className="container grid items-center gap-6 py-6 md:py-20"
+        className="container grid items-center gap-6 py-12 md:py-20"
       >
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h2 className="text-2xl font-extrabold leading-tight tracking-tight md:text-3xl">

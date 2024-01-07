@@ -1,20 +1,20 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-    name: "Next.js 14 Boilerplate",
+    name: "Next.js 14",
     description: "A starter template for Next.js 14 with TypeScript, ESLint, Prettier, Radix UI and Tailwind CSS",
     siteNav: [
         {
             title: "Home",
-            href: "/"
+            href: "#"
         },
         {
             title: "About",
-            href: "/about"
+            href: "#"
         },
         {
             title: "Contact",
-            href: "/contact"
+            href: "#"
         }
     ],
     socialNav: {

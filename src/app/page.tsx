@@ -1,124 +1,41 @@
-import * as React from "react"
 import Link from "next/link"
 
-import { buttonVariants } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Icons } from "@/components/icons"
+import WarframeCards from "@/components/WarframeCards"
 
-export default function Home() {
+import getData from "../Api/data"
+
+export default async function Home() {
+  const data = await getData()
+
   return (
-    <main>
-      <section
-        id="hero"
-        className="container grid items-center gap-6 py-12 md:py-20"
-      >
-        <div className="flex max-w-[980px] flex-col items-start gap-2">
-          <h1 className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">
-            Next.js 14 boilerplate <br className="hidden sm:inline" />
-            Avoid the sweat and tears.
-          </h1>
-          <p className="max-w-[700px] text-lg text-muted-foreground">
-            Forget the struggle, embrace the snuggle. This boilerplate is
-            configured with the most popular Next.js plugins and tools.
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-800">
+      <section className="bg-gray-700 py-8 text-center text-white dark:bg-gray-900">
+        <h1 className="text-4xl font-bold">CHOOSE YOUR WARFRAME</h1>
+        <p className="mt-2">
+          With a vast array of fully customizable Warframes -- each with their
+          own unique abilities like Invisibility, Teleport or Mind Control --
+          the power is yours to create the perfect assassin, tank, support or
+          stealth Warframe
+        </p>
+      </section>
+
+      <main className="container mx-auto rounded-lg bg-white p-6 shadow-lg dark:bg-gray-700">
+        <WarframeCards data={data} />
+
+        <div className="mt-8 text-center">
+          <p className="text-gray-500 dark:text-gray-300">
+            Discover more about Warframes and join the adventure!
           </p>
-        </div>
-        <div className="flex gap-4">
           <Link
-            href="https://www.ideebi.com/templates"
+            href="https://www.warframe.com/"
             target="_blank"
-            rel="noreferrer"
-            className={buttonVariants()}
+            rel="noopener noreferrer"
+            className="mt-4 inline-block rounded-full bg-gray-500 px-6 py-2 text-white transition-all duration-300 hover:bg-blue-600 dark:bg-gray-900"
           >
-            Documentation
-          </Link>
-          <Link
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/ideebico/"
-            className={buttonVariants({ variant: "outline" })}
-          >
-            GitHub
+            Visit Warframe
           </Link>
         </div>
-      </section>
-      <div className="mx-auto h-[1px] max-w-[980px] bg-gradient-to-r from-background via-muted to-background" />
-      <section
-        id="modules"
-        className="container grid items-center gap-6 py-12 md:py-20"
-      >
-        <div className="flex max-w-[980px] flex-col items-start gap-2">
-          <h2 className="text-2xl font-extrabold leading-tight tracking-tight md:text-3xl">
-            The stuff we used to make it.
-          </h2>
-          <p className="max-w-[700px] text-lg text-muted-foreground">
-            Don&apos;t worry. It won&apos;t blow up your node_modules folder.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Icons.reactLogo className="mr-2 h-6 w-6" />
-                React
-              </CardTitle>
-              <CardDescription>v18</CardDescription>
-            </CardHeader>
-            <CardContent>
-              React is a JavaScript library for building UIs.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Icons.nextLogo className="mr-2 h-6 w-6" />
-                Next.js
-              </CardTitle>
-              <CardDescription>v14</CardDescription>
-            </CardHeader>
-            <CardContent>
-              Next.js simplifies React for SSR and routing.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Icons.tailwindLogo className="mr-2 h-6 w-6" />
-                TailwindCSS
-              </CardTitle>
-              <CardDescription>v3</CardDescription>
-            </CardHeader>
-            <CardContent>Tailwind CSS streamlines UI development.</CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Icons.typescriptLogo className="mr-2 h-6 w-6" />
-                TypeScript
-              </CardTitle>
-              <CardDescription>v5</CardDescription>
-            </CardHeader>
-            <CardContent>
-              TypeScript adds static typing to JavaScript.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Icons.nextLogo className="mr-2 h-6 w-6" />
-                Next Themes
-              </CardTitle>
-              <CardDescription>v0.2</CardDescription>
-            </CardHeader>
-            <CardContent>Next Themes adds dark mode support.</CardContent>
-          </Card>
-        </div>
-      </section>
-    </main>
+      </main>
+    </div>
   )
 }

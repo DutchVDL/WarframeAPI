@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Warframe API Project
+
+## Overview
+
+The Warframe API Project is a web application designed to provide comprehensive information about Warframes, their abilities, and other related details within the popular online game, Warframe. This project leverages cutting-edge technologies to offer users an immersive and visually appealing experience.
+
+## Features
+
+- **Interactive Filtering:** Seamlessly filter Warframes based on categories such as Warframe type, Prime Warframes, Archwing, and Necramech.
+- **Detailed Information:** Explore in-depth details about each Warframe, including health, armor, shield, power, and more.
+- **Abilities Showcase:** Gain insights into the unique abilities of each Warframe through a visually appealing and informative display.
 
 ## Getting Started
 
-First, run the development server:
+To run the Warframe API Project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the Repository:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone https://github.com/your-username/warframe-api-project.git
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Install Dependencies::**
 
-## Learn More
+   ```bash
 
-To learn more about Next.js, take a look at the following resources:
+    cd warframe-api-project
+    npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Run the Application::**
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+   Access the application at http://localhost:3000 in your web browser.
+   ```
+
+## Usage
+
+Explore Warframes:
+
+Navigate through the list of Warframes presented on the main page.
+Filter Warframes based on your preferences using the intuitive category filter.
+View Detailed Information:
+
+Click on a Warframe card to access detailed information, including abilities, health, armor, and more.
+Abilities Showcase:
+
+Delve into the unique abilities of each Warframe through a user-friendly and visually appealing presentation.
+
+## Technologies Used
+
+**React**: A powerful JavaScript library for building user interfaces.
+
+**Next.js**: A React framework for building server-side rendered applications.
+
+**Tailwind CSS**: A utility-first CSS framework for building responsive designs.
